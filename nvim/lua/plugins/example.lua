@@ -116,24 +116,49 @@ return {
   { import = "lazyvim.plugins.extras.lang.typescript" },
 
   -- add more treesitter parsers
+
   {
     "nvim-treesitter/nvim-treesitter",
     opts = {
       ensure_installed = {
+        -- Core
         "bash",
-        "html",
-        "javascript",
-        "json",
+        "c",
+        "cpp",
         "lua",
-        "markdown",
-        "markdown_inline",
-        "python",
+        "vim",
+        "vimdoc",
         "query",
         "regex",
-        "tsx",
+
+        -- Web
+        "html",
+        "css",
+        "scss",
+        "javascript",
         "typescript",
-        "vim",
+        "tsx",
+        "json",
         "yaml",
+        "toml",
+        "markdown",
+        "markdown_inline",
+
+        -- Data & Config
+        "xml",
+        "ini",
+        "csv",
+
+        -- Misc
+        "python",
+        "dockerfile",
+        "gitignore",
+        "make",
+        "comment",
+      },
+      highlight = {
+        enable = true,
+        additional_vim_regex_highlighting = false,
       },
     },
   },
