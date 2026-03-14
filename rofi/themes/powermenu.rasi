@@ -1,0 +1,105 @@
+* {
+    bg1:            #1F1F1F;
+    bg2:            #373B41;
+    fg:             #FFFFFF;
+    primary:        #C5C8C6;
+    secondary:      #8ABEB7;
+    alert:          #A54242;
+    disabled:       #707880;
+
+    background:     #1F1F1F;
+    background-alt: #373B41;
+    foreground:     #FFFFFF;
+
+    background-color: transparent;
+    text-color: @foreground;
+    font: "Inter Nerd Font 12";
+}
+
+window {
+    location: center;
+    anchor: center;
+    width: 320px;
+    border: 2px;
+    border-color: @background-alt;
+    border-radius: 10px;
+    background-color: @background;
+    padding: 12px;
+}
+
+mainbox {
+    background-color: @background;
+    spacing: 8px;
+    children: [ inputbar, listview ];
+}
+
+inputbar {
+    background-color: @background-alt;
+    border-radius: 8px;
+    padding: 10px;
+    spacing: 8px;
+    children: [ prompt, entry ];
+}
+
+prompt {
+    background-color: transparent;
+    text-color: @secondary;
+    str: "";
+}
+
+entry {
+    background-color: transparent;
+    text-color: @foreground;
+    placeholder: "Power";
+    cursor: text;
+}
+
+listview {
+    background-color: @background;
+    columns: 1;
+    lines: 4;
+    spacing: 6px;
+    scrollbar: false;
+    cycle: false;
+    dynamic: false;
+    padding: 2px;
+}
+
+element {
+    background-color: @background;
+    text-color: @primary;
+    border-radius: 8px;
+    padding: 10px 12px;
+}
+
+element normal.normal {
+    background-color: @background;
+    text-color: @primary;
+}
+
+element selected.normal {
+    background-color: @background-alt;
+    text-color: @secondary;
+}
+
+element selected.active {
+    background-color: @background-alt;
+    text-color: @secondary;
+}
+
+element selected.urgent {
+    background-color: @alert;
+    text-color: @foreground;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    vertical-align: 0.5;
+}
+
+element-icon {
+    background-color: transparent;
+    text-color: inherit;
+    size: 18px;
+}

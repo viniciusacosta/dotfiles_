@@ -1,7 +1,11 @@
 /** Basic config file **/
 
+/** Basic config file **/
+
 configuration {
-  show-icons:         true;
-  icon-theme:         "Papirus";
+  show-icons: true;
+  icon-theme: "Papirus";
+  me-select-entry: "MousePrimary";
+  me-accept-entry: "MouseDPrimary";
+  me-accept-custom: "Control+MouseDPrimary";
 }
-@import "/home/vinicius/.config/awesome/theme/sidebar.rasi"

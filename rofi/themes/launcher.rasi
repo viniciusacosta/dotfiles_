@@ -1,0 +1,104 @@
+* {
+    bg1:            #1f1f1f;
+    bg2:            #373b41;
+    fg:             #ffffff;
+    primary:        #c5c8c6;
+    secondary:      #8abeb7;
+    alert:          #a54242;
+    disabled:       #707880;
+
+    background:     #1f1f1f;
+    background-alt: #373b41;
+    foreground:     #ffffff;
+
+    background-color: transparent;
+    text-color: @foreground;
+    font: "Inter Nerd Font 12";
+}
+
+window {
+    location: center;
+    anchor: center;
+    width: 32%;
+    border: 2px;
+    border-color: @background-alt;
+    border-radius: 10px;
+    background-color: @background;
+    padding: 12px;
+}
+
+mainbox {
+    background-color: @background;
+    spacing: 8px;
+    children: [ inputbar, message, listview ];
+}
+
+inputbar {
+    background-color: @background-alt;
+    border-radius: 8px;
+    padding: 10px;
+    spacing: 8px;
+    children: [ prompt, entry ];
+}
+
+prompt {
+    background-color: transparent;
+    text-color: @secondary;
+}
+
+entry {
+    background-color: transparent;
+    text-color: @foreground;
+    placeholder: "Search";
+}
+
+message {
+    background-color: @background;
+}
+
+listview {
+    background-color: @background;
+    columns: 1;
+    lines: 8;
+    spacing: 6px;
+    scrollbar: false;
+    padding: 2px;
+}
+
+element {
+    background-color: @background;
+    text-color: @primary;
+    border-radius: 8px;
+    padding: 8px 10px;
+}
+
+element normal.normal {
+    background-color: @background;
+    text-color: @primary;
+}
+
+element selected.normal {
+    background-color: @background-alt;
+    text-color: @secondary;
+}
+
+element selected.active {
+    background-color: @background-alt;
+    text-color: @secondary;
+}
+
+element selected.urgent {
+    background-color: @alert;
+    text-color: @foreground;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+}
+
+element-icon {
+    background-color: transparent;
+    text-color: inherit;
+    size: 20px;
+}
